@@ -38,5 +38,16 @@ public class App {
         }finally{
             System.out.println("Always run");
         }
+
+        try {
+            int age = 17;
+            if (age < 18){
+                throw new Exception("under age");
+            }else{
+                System.out.println("can enter");
+            }
+        } catch (Exception e) {
+            System.out.println("error: " + e.getMessage());
+        }
     }
 }
