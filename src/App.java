@@ -28,6 +28,15 @@ public class App {
             System.out.println("alawys run");
         }
 
-        
+        try{
+            String[] names = {"ahmed", "ayman", "abdelfatah"};
+            System.out.println(names[3]);
+        }catch(ArithmeticException e){
+            System.out.println("Arithmetic error: " + e.getMessage());
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Array error: " + e.getMessage());
+        }finally{
+            System.out.println("Always run");
+        }
     }
 }
