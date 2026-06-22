@@ -16,5 +16,18 @@ public class App {
             System.out.println("error Arithmetic: " + e.getMessage());
         }
 
+        try{
+            int[] numbers = {10,20,50,80};
+            System.out.println(numbers[9]);
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("error: " + e.getMessage());
+        }catch(ArithmeticException e){
+            System.out.println("error Arithmetic: " + e.getMessage());
+        }
+        finally{
+            System.out.println("alawys run");
+        }
+
+        
     }
 }
