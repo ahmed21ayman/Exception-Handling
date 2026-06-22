@@ -1,4 +1,14 @@
 public class App {
+
+
+    static void register(int age) throws Exception {
+            if (age < 18) {
+                throw new Exception("under age");
+            }else {
+                System.out.println("can enter");
+            }
+        }
+
     public static void main(String[] args) throws Exception {
         try{
             int a= 100/0;
@@ -48,6 +58,12 @@ public class App {
             }
         } catch (Exception e) {
             System.out.println("error: " + e.getMessage());
+        }
+
+        try {
+            register(16);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }
